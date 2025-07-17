@@ -138,6 +138,59 @@
       background-repeat: no-repeat;
       background-size: contain;
     }
+
+    /* PALMARES */
+    .palmares-section {
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 40px;
+      margin-bottom: 60px;
+    }
+    .palmares-box {
+      background: #1f1f1f;
+      padding: 25px 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px #00aaff33;
+      width: 320px;
+      border: 2px solid transparent;
+      transition: border-color 0.3s ease;
+    }
+    .palmares-box:hover {
+      border-color: #00aaff;
+    }
+    .palmares-header {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #00aaff;
+      margin-bottom: 20px;
+      text-align: center;
+      text-shadow: 0 0 4px #00aaff;
+    }
+    .palmares-list {
+      list-style: none;
+      font-size: 1rem;
+      font-weight: 600;
+      color: #ddd;
+    }
+    .palmares-list li {
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding-left: 5px;
+      border-left: 4px solid #004466;
+      transition: border-color 0.3s ease;
+    }
+    .palmares-list li:hover {
+      border-color: #00aaff;
+    }
+    .palmares-list li strong {
+      color: #00aaff;
+      min-width: 100px;
+      display: inline-block;
+    }
   </style>
 </head>
 <body>
@@ -148,6 +201,8 @@
   </header>
 
   <section class="ediciones">
+    <!-- Ediciones existentes ... (los mismos que antes) -->
+
     <!-- Edicion 1 -->
     <article class="edicion-box">
       <div class="edicion-header">Primera Edición</div>
@@ -159,7 +214,6 @@
       <div class="resultado">Resultado: 1 - 0</div>
       <div class="campeon">Campeón: <strong>Rashi</strong> con Bayern de Munich</div>
     </article>
-
     <!-- Edicion 2 -->
     <article class="edicion-box">
       <div class="edicion-header">Segunda Edición</div>
@@ -171,7 +225,6 @@
       <div class="resultado">Resultado: 3 - 0</div>
       <div class="campeon">Campeón: <strong>Benja</strong> con Valencia</div>
     </article>
-
     <!-- Edicion 3 -->
     <article class="edicion-box">
       <div class="edicion-header">Tercera Edición</div>
@@ -183,142 +236,10 @@
       <div class="resultado">Resultado: 1 - 0</div>
       <div class="campeon">Campeón: <strong>Ema</strong> con Chelsea</div>
     </article>
-
     <!-- Edicion 4 -->
     <article class="edicion-box">
       <div class="edicion-header">Cuarta Edición (Mundialista)</div>
       <div class="final-info">
         <div class="equipo"><div class="equipo-logo logo-espana"></div> España</div>
         <div class="vs">vs</div>
-        <div class="equipo"><div class="equipo-logo logo-argentina"></div> Argentina</div>
-      </div>
-      <div class="resultado">Resultado: 2 - 1</div>
-      <div class="campeon">Campeón: <strong>Benja</strong> con España</div>
-    </article>
-
-    <!-- Edicion 5 -->
-    <article class="edicion-box">
-      <div class="edicion-header">Quinta Edición</div>
-      <div class="final-info">
-        <div class="equipo"><div class="equipo-logo logo-united"></div> Manchester United</div>
-        <div class="vs">vs</div>
-        <div class="equipo"><div class="equipo-logo logo-chelsea"></div> Chelsea</div>
-      </div>
-      <div class="resultado">Resultado: 2 - 0</div>
-      <div class="campeon">Campeón: <strong>Moya</strong> con Manchester United</div>
-    </article>
-
-    <!-- Edicion 6 -->
-    <article class="edicion-box">
-      <div class="edicion-header">Sexta Edición</div>
-      <div class="final-info">
-        <div class="equipo"><div class="equipo-logo logo-united"></div> Manchester United</div>
-        <div class="vs">vs</div>
-        <div class="equipo"><div class="equipo-logo logo-valencia"></div> Valencia</div>
-      </div>
-      <div class="resultado">Resultado: 4 - 2</div>
-      <div class="campeon">Campeón: <strong>Moya</strong> con Manchester United</div>
-    </article>
-
-    <!-- Edicion 7 -->
-    <article class="edicion-box">
-      <div class="edicion-header">Séptima Edición</div>
-      <div class="final-info">
-        <div class="equipo"><div class="equipo-logo logo-arsenal"></div> Arsenal</div>
-        <div class="vs">vs</div>
-        <div class="equipo"><div class="equipo-logo logo-chelsea"></div> Chelsea</div>
-      </div>
-      <div class="resultado">Resultado: 4 - 2</div>
-      <div class="campeon">Campeón: <strong>Benja</strong> con Arsenal</div>
-    </article>
-
-    <!-- Edicion 8 -->
-    <article class="edicion-box">
-      <div class="edicion-header">Octava Edición (Mundialista)</div>
-      <div class="final-info">
-        <div class="equipo"><div class="equipo-logo logo-espana"></div> España</div>
-        <div class="vs">vs</div>
-        <div class="equipo"><div class="equipo-logo logo-alemania"></div> Alemania</div>
-      </div>
-      <div class="resultado">Resultado: 2 - 2 (Penales 4 - 1)</div>
-      <div class="campeon">Campeón: <strong>Benja</strong> con España</div>
-    </article>
-
-    <!-- Edicion 9 -->
-    <article class="edicion-box">
-      <div class="edicion-header">Novena Edición</div>
-      <div class="final-info">
-        <div class="equipo"><div class="equipo-logo logo-arsenal"></div> Arsenal</div>
-        <div class="vs">vs</div>
-        <div class="equipo"><div class="equipo-logo logo-inter"></div> Inter</div>
-      </div>
-      <div class="resultado">Resultado: 2 - 1</div>
-      <div class="campeon">Campeón: <strong>Benja</strong> con Arsenal</div>
-    </article>
-
-    <!-- Edicion 10 -->
-    <article class="edicion-box">
-      <div class="edicion-header">Décima Edición</div>
-      <div class="final-info">
-        <div class="equipo"><div class="equipo-logo logo-holanda"></div> Holanda</div>
-        <div class="vs">vs</div>
-        <div class="equipo"><div class="equipo-logo logo-inglaterra"></div> Inglaterra</div>
-      </div>
-      <div class="resultado">Resultado: 2 - 1</div>
-      <div class="campeon">Campeón: <strong>Ema</strong> con Holanda</div>
-    </article>
-
-    <!-- Edicion 11 -->
-    <article class="edicion-box">
-      <div class="edicion-header">Onceava Edición</div>
-      <div class="final-info">
-        <div class="equipo"><div class="equipo-logo logo-chelsea"></div> Chelsea</div>
-        <div class="vs">vs</div>
-        <div class="equipo"><div class="equipo-logo logo-barcelona"></div> Barcelona</div>
-      </div>
-      <div class="resultado">Resultado: 1 - 0</div>
-      <div class="campeon">Campeón: <strong>Ema</strong> con Chelsea</div>
-    </article>
-
-    <!-- Edicion 12 -->
-    <article class="edicion-box">
-      <div class="edicion-header">Doceava Edición</div>
-      <div class="final-info">
-        <div class="equipo"><div class="equipo-logo logo-barcelona"></div> Barcelona</div>
-        <div class="vs">vs</div>
-        <div class="equipo"><div class="equipo-logo logo-inter"></div> Inter</div>
-      </div>
-      <div class="resultado">Resultado: 1 - 0</div>
-      <div class="campeon">Campeón: <strong>Cordi</strong> con Barcelona</div>
-    </article>
-
-    <!-- Edicion 13 -->
-    <article class="edicion-box">
-      <div class="edicion-header">Treceava Edición</div>
-      <div class="final-info">
-        <div class="equipo"><div class="equipo-logo logo-inter"></div> Inter</div>
-        <div class="vs">vs</div>
-        <div class="equipo"><div class="equipo-logo logo-chelsea"></div> Chelsea</div>
-      </div>
-      <div class="resultado">Resultado: 3 - 2</div>
-      <div class="campeon">Campeón: <strong>Gena</strong> con Inter</div>
-    </article>
-
-    <!-- Edicion 14 -->
-    <article class="edicion-box">
-      <div class="edicion-header">Catorceava Edición</div>
-      <div class="final-info">
-        <div class="equipo"><div class="equipo-logo logo-argentina"></div> Argentina</div>
-        <div class="vs">vs</div>
-        <div class="equipo"><div class="equipo-logo logo-italia"></div> Italia</div>
-      </div>
-      <div class="resultado">Resultado: 1 - 0</div>
-      <div class="campeon">Campeón: <strong>Cordi</strong> con Argentina</div>
-    </article>
-  </section>
-
-  <footer>
-    &copy; 2025 Torneo PES 6 - Hecho con pasión futbolera ⚽
-  </footer>
-</body>
-</html>
+        <div class
