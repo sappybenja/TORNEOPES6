@@ -1,120 +1,200 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Torneo PES 6 - Ediciones y Campeones</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 20px;
-      background: #f4f4f9;
-      color: #333;
-    }
-    h1, h2 {
-      color: #0077cc;
-    }
-    section {
-      background: white;
-      padding: 15px 20px;
-      margin-bottom: 25px;
-      border-radius: 8px;
-      box-shadow: 0 0 8px rgba(0,0,0,0.1);
-    }
-    ul {
-      list-style-type: none;
-      padding-left: 0;
-    }
-    li {
-      margin: 8px 0;
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 10px;
-    }
-    th, td {
-      border: 1px solid #ccc;
-      padding: 8px 12px;
-      text-align: left;
-    }
-    th {
-      background-color: #0077cc;
-      color: white;
-    }
-  </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Torneo PES - Ediciones y Palmarés</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f9f9f9;
+            margin: 0;
+            padding: 0 20px;
+            color: #333;
+        }
+        h1, h2 {
+            color: #0056b3;
+        }
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            background: white;
+            padding: 30px 40px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        ul li {
+            padding: 6px 0;
+            border-bottom: 1px solid #eee;
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        .section:last-child {
+            margin-bottom: 0;
+        }
+        .palmares-list {
+            display: flex;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        .palmares-box {
+            flex: 1 1 300px;
+            background: #eef5fb;
+            padding: 20px;
+            border-radius: 6px;
+        }
+        .palmares-box h3 {
+            margin-top: 0;
+            color: #004080;
+        }
+    </style>
 </head>
 <body>
-  <h1>Torneo PES 6</h1>
+    <div class="container">
+        <h1>Ediciones y Campeones</h1>
+        <div class="section">
+            <ul>
+                <li><strong>Primera edición:</strong> Rashi con Bayern de Munich</li>
+                <li><strong>Segunda edición:</strong> Benja con Valencia</li>
+                <li><strong>Tercera edición:</strong> Ema con Chelsea</li>
+                <li><strong>Cuarta edición (Mundialista):</strong> Benja con España</li>
+                <li><strong>Quinta edición:</strong> Moya con Manchester United</li>
+                <li><strong>Sexta edición:</strong> Moya con Manchester United</li>
+                <li><strong>Séptima edición:</strong> Benja con Arsenal</li>
+                <li><strong>Octava edición (Mundialista):</strong> Benja con España</li>
+                <li><strong>Novena edición:</strong> Benja con Arsenal</li>
+                <li><strong>Décima edición:</strong> Ema con Holanda</li>
+                <li><strong>Onceava edición:</strong> Ema con Chelsea</li>
+                <li><strong>Doceava edición:</strong> Cordi con Barcelona</li>
+                <li><strong>Treceava edición:</strong> Gena con Inter</li>
+                <li><strong>Catorceava edición:</strong> Cordi con Argentina</li>
+            </ul>
+        </div>
 
-  <section id="campeones">
-    <h2>Ediciones y Campeones</h2>
-    <ul>
-      <li>Primera edición: Rashi con Bayern de Munich</li>
-      <li>Segunda edición: Benja con Valencia</li>
-      <li>Tercera edición: Ema con Chelsea</li>
-      <li>Cuarta edición (Mundialista): Benja con España</li>
-      <li>Quinta edición: Moya con Manchester United</li>
-      <li>Sexta edición: Moya con Manchester United</li>
-      <li>Séptima edición: Benja con Arsenal</li>
-      <li>Octava edición (Mundialista): Benja con España</li>
-      <li>Novena edición: Benja con Arsenal</li>
-      <li>Décima edición: Ema con Holanda</li>
-      <li>Onceava edición: Ema con Chelsea</li>
-      <li>Doceava edición: Cordi con Barcelona</li>
-      <li>Treceava edición: Gena con Inter</li>
-      <li>Catorceava edición: Cordi con Argentina</li>
-    </ul>
-  </section>
+        <h2>Palmarés por Persona</h2>
+        <div class="section palmares-list">
+            <div class="palmares-box">
+                <h3>Benja</h3>
+                <ul>
+                    <li>5 títulos</li>
+                    <li>Campeón con: Valencia, España, Arsenal</li>
+                </ul>
+            </div>
+            <div class="palmares-box">
+                <h3>Moya</h3>
+                <ul>
+                    <li>2 títulos</li>
+                    <li>Campeón con: Manchester United</li>
+                </ul>
+            </div>
+            <div class="palmares-box">
+                <h3>Ema</h3>
+                <ul>
+                    <li>3 títulos</li>
+                    <li>Campeón con: Chelsea, Holanda</li>
+                </ul>
+            </div>
+            <div class="palmares-box">
+                <h3>Cordi</h3>
+                <ul>
+                    <li>2 títulos</li>
+                    <li>Campeón con: Barcelona, Argentina</li>
+                </ul>
+            </div>
+            <div class="palmares-box">
+                <h3>Rashi</h3>
+                <ul>
+                    <li>1 título</li>
+                    <li>Campeón con: Bayern de Munich</li>
+                </ul>
+            </div>
+            <div class="palmares-box">
+                <h3>Gena</h3>
+                <ul>
+                    <li>1 título</li>
+                    <li>Campeón con: Inter</li>
+                </ul>
+            </div>
+        </div>
 
-  <section id="finales">
-    <h2>Finales</h2>
-    <p>Aquí podés agregar detalles de las finales si querés (fecha, resultado, equipos, etc.)</p>
-  </section>
-
-  <section id="palmares-jugadores">
-    <h2>Palmarés de Jugadores</h2>
-    <table>
-      <thead>
-        <tr>
-          <th>Jugador</th>
-          <th>Títulos</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr><td>Benja</td><td>6 títulos (2 con España, 2 con Arsenal, 1 con Valencia)</td></tr>
-        <tr><td>Moya</td><td>2 títulos (Manchester United)</td></tr>
-        <tr><td>Ema</td><td>3 títulos (Chelsea y Holanda)</td></tr>
-        <tr><td>Rashi</td><td>1 título (Bayern de Munich)</td></tr>
-        <tr><td>Cordi</td><td>2 títulos (Barcelona y Argentina)</td></tr>
-        <tr><td>Gena</td><td>1 título (Inter)</td></tr>
-      </tbody>
-    </table>
-  </section>
-
-  <section id="palmares-clubes">
-    <h2>Palmarés de Clubes</h2>
-    <table>
-      <thead>
-        <tr>
-          <th>Club</th>
-          <th>Títulos</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr><td>España</td><td>2 títulos</td></tr>
-        <tr><td>Arsenal</td><td>3 títulos</td></tr>
-        <tr><td>Manchester United</td><td>2 títulos</td></tr>
-        <tr><td>Chelsea</td><td>2 títulos</td></tr>
-        <tr><td>Bayern de Munich</td><td>1 título</td></tr>
-        <tr><td>Valencia</td><td>1 título</td></tr>
-        <tr><td>Holanda</td><td>1 título</td></tr>
-        <tr><td>Barcelona</td><td>1 título</td></tr>
-        <tr><td>Argentina</td><td>1 título</td></tr>
-        <tr><td>Inter</td><td>1 título</td></tr>
-      </tbody>
-    </table>
-  </section>
-
+        <h2>Palmarés por Clubes</h2>
+        <div class="section palmares-list">
+            <div class="palmares-box">
+                <h3>Arsenal</h3>
+                <ul>
+                    <li>2 títulos</li>
+                    <li>Campeón: Benja</li>
+                </ul>
+            </div>
+            <div class="palmares-box">
+                <h3>Manchester United</h3>
+                <ul>
+                    <li>2 títulos</li>
+                    <li>Campeón: Moya</li>
+                </ul>
+            </div>
+            <div class="palmares-box">
+                <h3>España</h3>
+                <ul>
+                    <li>2 títulos (mundialista)</li>
+                    <li>Campeón: Benja</li>
+                </ul>
+            </div>
+            <div class="palmares-box">
+                <h3>Chelsea</h3>
+                <ul>
+                    <li>2 títulos</li>
+                    <li>Campeón: Ema</li>
+                </ul>
+            </div>
+            <div class="palmares-box">
+                <h3>Valencia</h3>
+                <ul>
+                    <li>1 título</li>
+                    <li>Campeón: Benja</li>
+                </ul>
+            </div>
+            <div class="palmares-box">
+                <h3>Bayern de Munich</h3>
+                <ul>
+                    <li>1 título</li>
+                    <li>Campeón: Rashi</li>
+                </ul>
+            </div>
+            <div class="palmares-box">
+                <h3>Holanda</h3>
+                <ul>
+                    <li>1 título</li>
+                    <li>Campeón: Ema</li>
+                </ul>
+            </div>
+            <div class="palmares-box">
+                <h3>Barcelona</h3>
+                <ul>
+                    <li>1 título</li>
+                    <li>Campeón: Cordi</li>
+                </ul>
+            </div>
+            <div class="palmares-box">
+                <h3>Inter</h3>
+                <ul>
+                    <li>1 título</li>
+                    <li>Campeón: Gena</li>
+                </ul>
+            </div>
+            <div class="palmares-box">
+                <h3>Argentina</h3>
+                <ul>
+                    <li>1 título</li>
+                    <li>Campeón: Cordi</li>
+                </ul>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
