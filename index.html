@@ -42,6 +42,10 @@
     margin-bottom:15px;
     text-align:center;
   }
+  .card img {
+    width:100%;
+    border-radius:8px;
+  }
   .matchup {
     display:flex;
     justify-content:space-between;
@@ -94,20 +98,6 @@
     color:#00bfff;
     margin-bottom:20px;
   }
-  .palmares ul {
-    list-style:none;
-    padding:0;
-  }
-  .palmares li {
-    display:flex;
-    justify-content:space-between;
-    padding:10px 0;
-    border-bottom:1px solid #333;
-    font-weight:bold;
-  }
-  .palmares li span {
-    color:#00ff88;
-  }
   .accordion {
     background:#1a1a1a;
     border-radius:10px;
@@ -149,83 +139,50 @@
   <h1>Torneo PES 6</h1>
 </header>
 
-<!-- Aquí iría el contenido de las ediciones del torneo -->
 <section class="palmares">
   <h2>🏅 Palmarés de Jugadores</h2>
-  <ul>
-    <li>Benja <span>5 títulos</span></li>
-    <li>Ema <span>3 títulos</span></li>
-    <li>Cordi <span>2 títulos</span></li>
-    <li>Moya <span>2 títulos</span></li>
-    <li>Rashi <span>1 título</span></li>
-    <li>Gena <span>1 título</span></li>
-  </ul>
-</section>
-
-<section class="palmares-clubes">
-  <h2>🏆 Palmarés de Clubes</h2>
   <div class="accordion" onclick="toggleAccordion(this)">
-    <div class="accordion-header">Arsenal - 2 títulos</div>
+    <div class="accordion-header">Benja - 5 títulos</div>
     <div class="accordion-body">
-      <div class="final">Edición 7: Arsenal 4–2 Chelsea - <strong>Benja</strong></div>
-      <div class="final">Edición 9: Arsenal 2–1 Inter - <strong>Benja</strong></div>
+      <div class="final">Edición 2: Valencia 3–0 Bayern</div>
+      <div class="final">Edición 4: España 2–1 Argentina</div>
+      <div class="final">Edición 7: Arsenal 4–2 Chelsea</div>
+      <div class="final">Edición 8: España 2–2 (4–1) Alemania</div>
+      <div class="final">Edición 9: Arsenal 2–1 Inter</div>
     </div>
   </div>
   <div class="accordion" onclick="toggleAccordion(this)">
-    <div class="accordion-header">Manchester United - 2 títulos</div>
+    <div class="accordion-header">Ema - 3 títulos</div>
     <div class="accordion-body">
-      <div class="final">Edición 5: Man. United 2–0 Chelsea - <strong>Moya</strong></div>
-      <div class="final">Edición 6: Man. United 4–2 Valencia - <strong>Moya</strong></div>
+      <div class="final">Edición 3: Chelsea 1–0 Milan</div>
+      <div class="final">Edición 10: Holanda 2–1 Inglaterra</div>
+      <div class="final">Edición 11: Chelsea 1–0 Barcelona</div>
     </div>
   </div>
   <div class="accordion" onclick="toggleAccordion(this)">
-    <div class="accordion-header">España - 2 títulos</div>
+    <div class="accordion-header">Cordi - 2 títulos</div>
     <div class="accordion-body">
-      <div class="final">Edición 4: España 2–1 Argentina - <strong>Benja</strong></div>
-      <div class="final">Edición 8: España 2–2 (4–1) Alemania - <strong>Benja</strong></div>
+      <div class="final">Edición 12: Barcelona 1–0 Inter</div>
+      <div class="final">Edición 14: Argentina 2–1 Italia</div>
     </div>
   </div>
   <div class="accordion" onclick="toggleAccordion(this)">
-    <div class="accordion-header">Chelsea - 2 títulos</div>
+    <div class="accordion-header">Moya - 2 títulos</div>
     <div class="accordion-body">
-      <div class="final">Edición 3: Chelsea 1–0 Milan - <strong>Ema</strong></div>
-      <div class="final">Edición 11: Chelsea 1–0 Barcelona - <strong>Ema</strong></div>
+      <div class="final">Edición 5: Manchester United 2–0 Chelsea</div>
+      <div class="final">Edición 6: Manchester United 4–2 Valencia</div>
     </div>
   </div>
   <div class="accordion" onclick="toggleAccordion(this)">
-    <div class="accordion-header">Valencia - 1 título</div>
+    <div class="accordion-header">Rashi - 1 título</div>
     <div class="accordion-body">
-      <div class="final">Edición 2: Valencia 3–0 Bayern - <strong>Benja</strong></div>
+      <div class="final">Edición 1: Bayern 1–0 Valencia</div>
     </div>
   </div>
   <div class="accordion" onclick="toggleAccordion(this)">
-    <div class="accordion-header">Bayern de Munich - 1 título</div>
+    <div class="accordion-header">Gena - 1 título</div>
     <div class="accordion-body">
-      <div class="final">Edición 1: Bayern 1–0 Valencia - <strong>Rashi</strong></div>
-    </div>
-  </div>
-  <div class="accordion" onclick="toggleAccordion(this)">
-    <div class="accordion-header">Holanda - 1 título</div>
-    <div class="accordion-body">
-      <div class="final">Edición 10: Holanda 2–1 Inglaterra - <strong>Ema</strong></div>
-    </div>
-  </div>
-  <div class="accordion" onclick="toggleAccordion(this)">
-    <div class="accordion-header">Barcelona - 1 título</div>
-    <div class="accordion-body">
-      <div class="final">Edición 12: Barcelona 1–0 Inter - <strong>Cordi</strong></div>
-    </div>
-  </div>
-  <div class="accordion" onclick="toggleAccordion(this)">
-    <div class="accordion-header">Inter - 1 título</div>
-    <div class="accordion-body">
-      <div class="final">Edición 13: Inter 3–3 (4–2) Chelsea - <strong>Gena</strong></div>
-    </div>
-  </div>
-  <div class="accordion" onclick="toggleAccordion(this)">
-    <div class="accordion-header">Argentina - 1 título</div>
-    <div class="accordion-body">
-      <div class="final">Edición 14: Argentina 2–1 Italia - <strong>Cordi</strong></div>
+      <div class="final">Edición 13: Inter 3–3 (4–2) Chelsea</div>
     </div>
   </div>
 </section>
@@ -233,21 +190,21 @@
 <section class="palmares">
   <h2>📸 Momentos Históricos del Torneo</h2>
   <div class="container">
-    <div class="card"><h3>El Primer Campeón del Torneo</h3><img src="https://pbs.twimg.com/media/GDhYCWZXQAAhEFD?format=jpg&name=large" style="width:100%; border-radius:8px;"></div>
-    <div class="card"><h3>El Valencia Ganando su Primera Estrella</h3><img src="https://pbs.twimg.com/media/GDhYm0NWcAAraZT?format=png&name=360x360" style="width:100%; border-radius:8px;"></div>
-    <div class="card"><h3>El Gol de Robben: Chelsea Campeón</h3><img src="https://pbs.twimg.com/media/GDhZbmPWsAEm72U?format=jpg&name=large" style="width:100%; border-radius:8px;"></div>
-    <div class="card"><h3>España Levanta su Primera Copa del Mundo</h3><img src="https://pbs.twimg.com/media/GDhag4EXAAA221-?format=jpg&name=4096x4096" style="width:100%; border-radius:8px;"></div>
-    <div class="card"><h3>Torres: Goleador en Todos los Partidos</h3><img src="https://pbs.twimg.com/media/GDhWwmmWAAEhW7H?format=jpg&name=4096x4096" style="width:100%; border-radius:8px;"></div>
-    <div class="card"><h3>El United de Moya Campeón</h3><img src="https://pbs.twimg.com/media/GDhbzWNXkAAI1YZ?format=jpg&name=4096x4096" style="width:100%; border-radius:8px;"></div>
-    <div class="card"><h3>El United Bicampeón</h3><img src="https://pbs.twimg.com/media/GDiVFFeWAAAtnFD?format=png&name=small" style="width:100%; border-radius:8px;"></div>
-    <div class="card"><h3>El Arsenal de Benja: Los Invencibles</h3><img src="https://pbs.twimg.com/media/GDnwPehXMAASZYi?format=jpg&name=large" style="width:100%; border-radius:8px;"></div>
-    <div class="card"><h3>España Lo Hace de Nuevo</h3><img src="https://e00-elmundo.uecdn.es/mundial/2010/imagenes/2010/07/12/fasefinal/1278936199_0.jpg" style="width:100%; border-radius:8px;"></div>
-    <div class="card"><h3>Arsenal Invencible Bicampeón</h3><img src="https://pbs.twimg.com/media/GPCWSW5XwAAhfsP?format=png&name=small" style="width:100%; border-radius:8px;"></div>
-    <div class="card"><h3>Holanda Campeona del Mundo</h3><img src="https://veja.abril.com.br/wp-content/uploads/2016/06/futebol-copa-holanda-espanha-20140613-27-original.jpeg?quality=70&strip=info&w=928" style="width:100%; border-radius:8px;"></div>
-    <div class="card"><h3>Robben MVP y Campeón</h3><img src="https://pbs.twimg.com/media/GPF1bciXQAAbIbS?format=png&name=small" style="width:100%; border-radius:8px;"></div>
-    <div class="card"><h3>Barcelona Campeón por Primera Vez</h3><img src="https://pbs.twimg.com/media/GwFH90kWwAAZZrt?format=png&name=small" style="width:100%; border-radius:8px;"></div>
-    <div class="card"><h3>El Milagro de Pesna: Inter Campeón</h3><img src="https://pbs.twimg.com/media/GwFIYS1WoAA0pSr?format=png&name=small" style="width:100%; border-radius:8px;"></div>
-    <div class="card"><h3>Cordi Invatible: Su Primer Mundial</h3><img src="https://pbs.twimg.com/media/GwFdUWPWYAMBvmW?format=png&name=900x900" style="width:100%; border-radius:8px;"></div>
+    <div class="card"><h3>El Primer Campeón del Torneo</h3><img src="https://pbs.twimg.com/media/GDhYCWZXQAAhEFD?format=jpg&name=large"></div>
+    <div class="card"><h3>El Valencia Ganando su Primera Estrella</h3><img src="https://pbs.twimg.com/media/GDhYm0NWcAAraZT?format=png&name=360x360"></div>
+    <div class="card"><h3>El Gol de Robben: Chelsea Campeón</h3><img src="https://pbs.twimg.com/media/GDhZbmPWsAEm72U?format=jpg&name=large"></div>
+    <div class="card"><h3>España Levanta su Primera Copa del Mundo</h3><img src="https://pbs.twimg.com/media/GDhag4EXAAA221-?format=jpg&name=4096x4096"></div>
+    <div class="card"><h3>Torres: Goleador en Todos los Partidos</h3><img src="https://pbs.twimg.com/media/GDhWwmmWAAEhW7H?format=jpg&name=4096x4096"></div>
+    <div class="card"><h3>El United de Moya Campeón</h3><img src="https://pbs.twimg.com/media/GDhbzWNXkAAI1YZ?format=jpg&name=4096x4096"></div>
+    <div class="card"><h3>El United Bicampeón</h3><img src="https://pbs.twimg.com/media/GDiVFFeWAAAtnFD?format=png&name=small"></div>
+    <div class="card"><h3>El Arsenal de Benja: Los Invencibles</h3><img src="https://pbs.twimg.com/media/GDnwPehXMAASZYi?format=jpg&name=large"></div>
+    <div class="card"><h3>España Lo Hace de Nuevo</h3><img src="https://e00-elmundo.uecdn.es/mundial/2010/imagenes/2010/07/12/fasefinal/1278936199_0.jpg"></div>
+    <div class="card"><h3>Arsenal Invencible Bicampeón</h3><img src="https://pbs.twimg.com/media/GPCWSW5XwAAhfsP?format=png&name=small"></div>
+    <div class="card"><h3>Holanda Campeona del Mundo</h3><img src="https://veja.abril.com.br/wp-content/uploads/2016/06/futebol-copa-holanda-espanha-20140613-27-original.jpeg?quality=70&strip=info&w=928"></div>
+    <div class="card"><h3>Robben MVP y Campeón</h3><img src="https://pbs.twimg.com/media/GPF1bciXQAAbIbS?format=png&name=small"></div>
+    <div class="card"><h3>Barcelona Campeón por Primera Vez</h3><img src="https://pbs.twimg.com/media/GwFH90kWwAAZZrt?format=png&name=small"></div>
+    <div class="card"><h3>El Milagro de Pesna: Inter Campeón</h3><img src="https://pbs.twimg.com/media/GwFIYS1WoAA0pSr?format=png&name=small"></div>
+    <div class="card"><h3>Cordi Invatible: Su Primer Mundial</h3><img src="https://pbs.twimg.com/media/GwFdUWPWYAMBvmW?format=png&name=900x900"></div>
   </div>
 </section>
 
