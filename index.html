@@ -2,244 +2,222 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Torneo PES 6 - Ediciones, Finales y Palmarés</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Torneo PES 6</title>
   <style>
-    /* RESET */
-    * {
-      margin: 0; padding: 0; box-sizing: border-box;
-    }
     body {
+      background-color: #0e0e0e;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #121212 url('https://cdn-icons-png.flaticon.com/512/2112/2112960.png') no-repeat bottom right;
-      background-size: 150px;
-      color: #eee;
-      padding: 20px;
-      min-height: 100vh;
+      color: #f0f0f0;
+      margin: 0;
+      padding: 0;
     }
+
     header {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-      margin-bottom: 40px;
+      text-align: center;
+      padding: 30px 0;
+      background-color: #111;
+      border-bottom: 2px solid #00bfff;
     }
-    header img {
-      width: 80px;
-      filter: drop-shadow(0 0 3px #00aaff);
-    }
+
     header h1 {
+      color: #00bfff;
       font-size: 2.5rem;
-      color: #00aaff;
-      text-shadow: 0 0 5px #00aaff;
-    }
-    .ediciones {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 25px;
-      margin-bottom: 50px;
-    }
-    .edicion-box {
-      background: #1f1f1f;
-      border-radius: 12px;
-      padding: 20px;
-      box-shadow: 0 0 15px #00aaff33;
-      transition: transform 0.3s ease;
-      border: 2px solid transparent;
-    }
-    .edicion-box:hover {
-      transform: translateY(-6px);
-      border-color: #00aaff;
-    }
-    .edicion-header {
-      font-weight: 700;
-      font-size: 1.2rem;
-      margin-bottom: 15px;
-      color: #00aaff;
-      text-align: center;
-      text-shadow: 0 0 3px #00aaff;
-    }
-    .final-info {
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      gap: 15px;
-      margin-bottom: 12px;
-    }
-    .equipo {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-weight: 600;
-      font-size: 1rem;
-      flex: 1;
-      justify-content: center;
-    }
-    .equipo img {
-      width: 30px;
-      height: 30px;
-      border-radius: 5px;
-      box-shadow: 0 0 5px #00aaff;
-      background: #222;
-    }
-    .vs {
-      font-weight: 700;
-      font-size: 1.3rem;
-      color: #ccc;
-      text-shadow: 0 0 5px #0088ff88;
-    }
-    .resultado {
-      text-align: center;
-      font-size: 1.1rem;
-      font-weight: 700;
-      margin-bottom: 15px;
-      color: #00ffaa;
-      text-shadow: 0 0 6px #00ffaa;
-    }
-    .campeon {
-      text-align: center;
-      font-size: 1rem;
-      font-weight: 600;
-      color: #eee;
-    }
-    .campeon strong {
-      color: #00aaff;
-    }
-    footer {
-      text-align: center;
-      margin-top: 40px;
-      font-size: 0.9rem;
-      color: #666;
+      margin-bottom: 10px;
     }
 
-    /* Logos placeholder */
-    .logo-bayern { background: url('https://upload.wikimedia.org/wikipedia/commons/1/1f/FC_Bayern_München_logo_%282017%29.svg') no-repeat center; background-size: contain; }
-    .logo-valencia { background: url('https://upload.wikimedia.org/wikipedia/en/7/7e/Valencia_CF_logo.svg') no-repeat center; background-size: contain; }
-    .logo-chelsea { background: url('https://upload.wikimedia.org/wikipedia/en/c/cc/Chelsea_FC.svg') no-repeat center; background-size: contain; }
-    .logo-milan { background: url('https://upload.wikimedia.org/wikipedia/commons/d/d0/Logo_of_AC_Milan.svg') no-repeat center; background-size: contain; }
-    .logo-espana { background: url('https://upload.wikimedia.org/wikipedia/en/9/9a/Flag_of_Spain.svg') no-repeat center; background-size: contain; border-radius: 3px; }
-    .logo-argentina { background: url('https://upload.wikimedia.org/wikipedia/commons/1/1a/Flag_of_Argentina.svg') no-repeat center; background-size: contain; border-radius: 3px; }
-    .logo-united { background: url('https://upload.wikimedia.org/wikipedia/en/7/7a/Manchester_United_FC_crest.svg') no-repeat center; background-size: contain; }
-    .logo-arsenal { background: url('https://upload.wikimedia.org/wikipedia/en/5/53/Arsenal_FC.svg') no-repeat center; background-size: contain; }
-    .logo-alemania { background: url('https://upload.wikimedia.org/wikipedia/en/b/ba/Flag_of_Germany.svg') no-repeat center; background-size: contain; border-radius: 3px; }
-    .logo-inter { background: url('https://upload.wikimedia.org/wikipedia/en/0/05/FC_Internazionale_Milano_2021_logo.svg') no-repeat center; background-size: contain; }
-    .logo-holanda { background: url('https://upload.wikimedia.org/wikipedia/commons/2/20/Flag_of_the_Netherlands.svg') no-repeat center; background-size: contain; border-radius: 3px; }
-    .logo-inglaterra { background: url('https://upload.wikimedia.org/wikipedia/en/b/be/Flag_of_England.svg') no-repeat center; background-size: contain; border-radius: 3px; }
-    .logo-barcelona { background: url('https://upload.wikimedia.org/wikipedia/en/4/47/FC_Barcelona_%28crest%29.svg') no-repeat center; background-size: contain; }
-    .logo-italia { background: url('https://upload.wikimedia.org/wikipedia/en/0/03/Flag_of_Italy.svg') no-repeat center; background-size: contain; border-radius: 3px; }
-
-    /* Logos style */
-    .equipo-logo {
-      width: 30px;
-      height: 30px;
-      background-color: #222;
-      box-shadow: 0 0 5px #00aaff;
-      border-radius: 5px;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: contain;
-    }
-
-    /* PALMARES */
-    .palmares-section {
+    .container {
       display: flex;
-      gap: 30px;
       flex-wrap: wrap;
       justify-content: center;
-      margin-top: 40px;
-      margin-bottom: 60px;
+      gap: 20px;
+      padding: 30px;
     }
-    .palmares-box {
-      background: #1f1f1f;
-      padding: 25px 30px;
-      border-radius: 12px;
-      box-shadow: 0 0 15px #00aaff33;
-      width: 320px;
-      border: 2px solid transparent;
-      transition: border-color 0.3s ease;
+
+    .card {
+      background-color: #1a1a1a;
+      border: 1px solid #333;
+      border-radius: 10px;
+      padding: 20px;
+      width: 280px;
+      box-shadow: 0 0 12px #00bfff33;
+      transition: transform 0.3s;
     }
-    .palmares-box:hover {
-      border-color: #00aaff;
+
+    .card:hover {
+      transform: scale(1.03);
     }
-    .palmares-header {
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: #00aaff;
-      margin-bottom: 20px;
+
+    .card h3 {
       text-align: center;
-      text-shadow: 0 0 4px #00aaff;
+      color: #00bfff;
+      margin-bottom: 15px;
     }
-    .palmares-list {
-      list-style: none;
-      font-size: 1rem;
-      font-weight: 600;
-      color: #ddd;
-    }
-    .palmares-list li {
-      margin-bottom: 12px;
+
+    .matchup {
       display: flex;
+      justify-content: space-between;
       align-items: center;
-      gap: 10px;
-      padding-left: 5px;
-      border-left: 4px solid #004466;
-      transition: border-color 0.3s ease;
+      font-weight: bold;
+      margin-bottom: 10px;
     }
-    .palmares-list li:hover {
-      border-color: #00aaff;
+
+    .matchup span {
+      color: #ccc;
     }
-    .palmares-list li strong {
-      color: #00aaff;
-      min-width: 100px;
-      display: inline-block;
+
+    .result {
+      text-align: center;
+      font-size: 1.2rem;
+      color: #00ff88;
+      margin: 8px 0;
+    }
+
+    .champion {
+      text-align: center;
+      margin-top: 8px;
+      font-size: 0.95rem;
+      color: #ccc;
+    }
+
+    .champion span {
+      color: #00bfff;
+      font-weight: bold;
+    }
+
+    section.palmares {
+      background-color: #111;
+      padding: 30px;
+      margin-top: 40px;
+    }
+
+    section.palmares h2 {
+      text-align: center;
+      color: #00bfff;
+      margin-bottom: 20px;
+    }
+
+    .palmares-table {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .palmares-table ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .palmares-table li {
+      padding: 8px;
+      border-bottom: 1px solid #333;
+      display: flex;
+      justify-content: space-between;
+      color: #eee;
+    }
+
+    .palmares-table li span {
+      color: #00ff88;
     }
   </style>
 </head>
 <body>
 
   <header>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Pro_Evolution_Soccer_6_logo.svg/2560px-Pro_Evolution_Soccer_6_logo.svg.png" alt="Logo PES 6" />
     <h1>Torneo PES 6</h1>
   </header>
 
-  <section class="ediciones">
-    <!-- Ediciones existentes ... (los mismos que antes) -->
+  <div class="container">
+    <div class="card">
+      <h3>Primera Edición</h3>
+      <div class="matchup"><span>Bayern de Munich</span> vs <span>Valencia</span></div>
+      <div class="result">Resultado: 1 - 0</div>
+      <div class="champion">Campeón: <span>Rashi</span> con Bayern de Munich</div>
+    </div>
 
-    <!-- Edicion 1 -->
-    <article class="edicion-box">
-      <div class="edicion-header">Primera Edición</div>
-      <div class="final-info">
-        <div class="equipo"><div class="equipo-logo logo-bayern"></div> Bayern de Munich</div>
-        <div class="vs">vs</div>
-        <div class="equipo"><div class="equipo-logo logo-valencia"></div> Valencia</div>
-      </div>
-      <div class="resultado">Resultado: 1 - 0</div>
-      <div class="campeon">Campeón: <strong>Rashi</strong> con Bayern de Munich</div>
-    </article>
-    <!-- Edicion 2 -->
-    <article class="edicion-box">
-      <div class="edicion-header">Segunda Edición</div>
-      <div class="final-info">
-        <div class="equipo"><div class="equipo-logo logo-valencia"></div> Valencia</div>
-        <div class="vs">vs</div>
-        <div class="equipo"><div class="equipo-logo logo-bayern"></div> Bayern de Munich</div>
-      </div>
-      <div class="resultado">Resultado: 3 - 0</div>
-      <div class="campeon">Campeón: <strong>Benja</strong> con Valencia</div>
-    </article>
-    <!-- Edicion 3 -->
-    <article class="edicion-box">
-      <div class="edicion-header">Tercera Edición</div>
-      <div class="final-info">
-        <div class="equipo"><div class="equipo-logo logo-chelsea"></div> Chelsea</div>
-        <div class="vs">vs</div>
-        <div class="equipo"><div class="equipo-logo logo-milan"></div> Milan</div>
-      </div>
-      <div class="resultado">Resultado: 1 - 0</div>
-      <div class="campeon">Campeón: <strong>Ema</strong> con Chelsea</div>
-    </article>
-    <!-- Edicion 4 -->
-    <article class="edicion-box">
-      <div class="edicion-header">Cuarta Edición (Mundialista)</div>
-      <div class="final-info">
-        <div class="equipo"><div class="equipo-logo logo-espana"></div> España</div>
-        <div class="vs">vs</div>
-        <div class
+    <div class="card">
+      <h3>Segunda Edición</h3>
+      <div class="matchup"><span>Valencia</span> vs <span>Bayern de Munich</span></div>
+      <div class="result">Resultado: 3 - 0</div>
+      <div class="champion">Campeón: <span>Benja</span> con Valencia</div>
+    </div>
+
+    <div class="card">
+      <h3>Tercera Edición</h3>
+      <div class="matchup"><span>Chelsea</span> vs <span>Milan</span></div>
+      <div class="result">Resultado: 1 - 0</div>
+      <div class="champion">Campeón: <span>Ema</span> con Chelsea</div>
+    </div>
+
+    <div class="card">
+      <h3>Cuarta Edición (Mundialista)</h3>
+      <div class="matchup"><span>España</span> vs <span>Argentina</span></div>
+      <div class="result">Resultado: 2 - 1</div>
+      <div class="champion">Campeón: <span>Benja</span> con España</div>
+    </div>
+
+    <div class="card">
+      <h3>Quinta Edición</h3>
+      <div class="matchup"><span>Manchester United</span> vs <span>Chelsea</span></div>
+      <div class="result">Resultado: 2 - 0</div>
+      <div class="champion">Campeón: <span>Moya</span> con Manchester United</div>
+    </div>
+
+    <div class="card">
+      <h3>Sexta Edición</h3>
+      <div class="matchup"><span>Manchester United</span> vs <span>Valencia</span></div>
+      <div class="result">Resultado: 4 - 2</div>
+      <div class="champion">Campeón: <span>Moya</span> con Manchester United</div>
+    </div>
+
+    <div class="card">
+      <h3>Séptima Edición</h3>
+      <div class="matchup"><span>Arsenal</span> vs <span>Chelsea</span></div>
+      <div class="result">Resultado: 4 - 2</div>
+      <div class="champion">Campeón: <span>Benja</span> con Arsenal</div>
+    </div>
+
+    <div class="card">
+      <h3>Octava Edición (Mundialista)</h3>
+      <div class="matchup"><span>España</span> vs <span>Alemania</span></div>
+      <div class="result">2 - 2 (4 - 1 penales)</div>
+      <div class="champion">Campeón: <span>Benja</span> con España</div>
+    </div>
+
+    <div class="card">
+      <h3>Novena Edición</h3>
+      <div class="matchup"><span>Arsenal</span> vs <span>Inter</span></div>
+      <div class="result">Resultado: 2 - 1</div>
+      <div class="champion">Campeón: <span>Benja</span> con Arsenal</div>
+    </div>
+
+    <div class="card">
+      <h3>Décima Edición</h3>
+      <div class="matchup"><span>Holanda</span> vs <span>Inglaterra</span></div>
+      <div class="result">Resultado: 2 - 1</div>
+      <div class="champion">Campeón: <span>Ema</span> con Holanda</div>
+    </div>
+
+    <div class="card">
+      <h3>Onceava Edición</h3>
+      <div class="matchup"><span>Chelsea</span> vs <span>Barcelona</span></div>
+      <div class="result">Resultado: 1 - 0</div>
+      <div class="champion">Campeón: <span>Ema</span> con Chelsea</div>
+    </div>
+
+    <div class="card">
+      <h3>Doceava Edición</h3>
+      <div class="matchup"><span>Barcelona</span> vs <span>Inter</span></div>
+      <div class="result">Resultado: 1 - 0</div>
+      <div class="champion">Campeón: <span>Cordi</span> con Barcelona</div>
+    </div>
+
+    <div class="card">
+      <h3>Treceava Edición</h3>
+      <div class="matchup"><span>Inter</span> vs <span>Chelsea</span></div>
+      <div class="result">Resultado: 3 - 2</div>
+      <div class="champion">Campeón: <span>Gena</span> con Inter</div>
+    </div>
+
+    <div class="card">
+      <h3>Catorceava Edición</h3>
+      <div class="matchup"><span>Argentina</span> vs <span>Italia</span></div>
