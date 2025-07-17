@@ -3,113 +3,118 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Torneo PES 6</title>
+  <title>Torneo PES 6 - Ediciones y Campeones</title>
   <style>
     body {
-      background-color: #121212;
-      color: #e0e0e0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0; padding: 0;
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background: #f4f4f9;
+      color: #333;
     }
-    header {
-      background: #1f1f1f;
-      padding: 20px;
-      text-align: center;
-      border-bottom: 2px solid #ff3c3c;
-    }
-    header h1 {
-      margin: 0;
-      color: #ff3c3c;
-      font-size: 2.5em;
+    h1, h2 {
+      color: #0077cc;
     }
     section {
-      max-width: 900px;
-      margin: 30px auto;
-      padding: 0 20px;
-    }
-    h2 {
-      border-bottom: 2px solid #ff3c3c;
-      padding-bottom: 10px;
-      margin-bottom: 20px;
-      color: #ff3c3c;
-    }
-    .campeones, .finales {
-      background: #222;
+      background: white;
+      padding: 15px 20px;
+      margin-bottom: 25px;
       border-radius: 8px;
-      padding: 20px;
-      box-shadow: 0 0 8px #ff3c3c55;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
     }
-    .campeones ul, .finales ul {
-      list-style: none;
-      padding: 0;
+    ul {
+      list-style-type: none;
+      padding-left: 0;
     }
-    .campeones li, .finales li {
-      padding: 10px 0;
-      border-bottom: 1px solid #444;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+    li {
+      margin: 8px 0;
     }
-    .campeones li:last-child, .finales li:last-child {
-      border-bottom: none;
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
     }
-    .finales .resultado {
-      font-weight: bold;
-      color: #ff3c3c;
+    th, td {
+      border: 1px solid #ccc;
+      padding: 8px 12px;
+      text-align: left;
     }
-    footer {
-      text-align: center;
-      color: #555;
-      padding: 15px;
-      margin-top: 40px;
-      border-top: 1px solid #333;
-      font-size: 0.9em;
-    }
-    @media (max-width: 600px) {
-      .campeones li, .finales li {
-        flex-direction: column;
-        align-items: flex-start;
-      }
+    th {
+      background-color: #0077cc;
+      color: white;
     }
   </style>
 </head>
 <body>
-
-<header>
   <h1>Torneo PES 6</h1>
-  <p>¡Bienvenidos al torneo oficial de PES 6!</p>
-</header>
 
-<section class="campeones">
-  <h2>Campeones</h2>
-  <ul>
-    <li><span>2023 - Juan Pérez</span><span>Equipo: Barcelona</span></li>
-    <li><span>2022 - María López</span><span>Equipo: Real Madrid</span></li>
-    <li><span>2021 - Carlos Gómez</span><span>Equipo: Manchester United</span></li>
-  </ul>
-</section>
+  <section id="campeones">
+    <h2>Ediciones y Campeones</h2>
+    <ul>
+      <li>Primera edición: Rashi con Bayern de Munich</li>
+      <li>Segunda edición: Benja con Valencia</li>
+      <li>Tercera edición: Ema con Chelsea</li>
+      <li>Cuarta edición (Mundialista): Benja con España</li>
+      <li>Quinta edición: Moya con Manchester United</li>
+      <li>Sexta edición: Moya con Manchester United</li>
+      <li>Séptima edición: Benja con Arsenal</li>
+      <li>Octava edición (Mundialista): Benja con España</li>
+      <li>Novena edición: Benja con Arsenal</li>
+      <li>Décima edición: Ema con Holanda</li>
+      <li>Onceava edición: Ema con Chelsea</li>
+      <li>Doceava edición: Cordi con Barcelona</li>
+      <li>Treceava edición: Gena con Inter</li>
+      <li>Catorceava edición: Cordi con Argentina</li>
+    </ul>
+  </section>
 
-<section class="finales">
-  <h2>Finales</h2>
-  <ul>
-    <li>
-      <div>2023: Juan Pérez vs María López</div>
-      <div class="resultado">Resultado: 3 - 2</div>
-    </li>
-    <li>
-      <div>2022: María López vs Carlos Gómez</div>
-      <div class="resultado">Resultado: 4 - 1</div>
-    </li>
-    <li>
-      <div>2021: Carlos Gómez vs Luis Ramírez</div>
-      <div class="resultado">Resultado: 2 - 2 (penales 5-4)</div>
-    </li>
-  </ul>
-</section>
+  <section id="finales">
+    <h2>Finales</h2>
+    <p>Aquí podés agregar detalles de las finales si querés (fecha, resultado, equipos, etc.)</p>
+  </section>
 
-<footer>
-  &copy; 2025 Torneo PES 6 - Todos los derechos reservados
-</footer>
+  <section id="palmares-jugadores">
+    <h2>Palmarés de Jugadores</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Jugador</th>
+          <th>Títulos</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Benja</td><td>6 títulos (2 con España, 2 con Arsenal, 1 con Valencia)</td></tr>
+        <tr><td>Moya</td><td>2 títulos (Manchester United)</td></tr>
+        <tr><td>Ema</td><td>3 títulos (Chelsea y Holanda)</td></tr>
+        <tr><td>Rashi</td><td>1 título (Bayern de Munich)</td></tr>
+        <tr><td>Cordi</td><td>2 títulos (Barcelona y Argentina)</td></tr>
+        <tr><td>Gena</td><td>1 título (Inter)</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="palmares-clubes">
+    <h2>Palmarés de Clubes</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Club</th>
+          <th>Títulos</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>España</td><td>2 títulos</td></tr>
+        <tr><td>Arsenal</td><td>3 títulos</td></tr>
+        <tr><td>Manchester United</td><td>2 títulos</td></tr>
+        <tr><td>Chelsea</td><td>2 títulos</td></tr>
+        <tr><td>Bayern de Munich</td><td>1 título</td></tr>
+        <tr><td>Valencia</td><td>1 título</td></tr>
+        <tr><td>Holanda</td><td>1 título</td></tr>
+        <tr><td>Barcelona</td><td>1 título</td></tr>
+        <tr><td>Argentina</td><td>1 título</td></tr>
+        <tr><td>Inter</td><td>1 título</td></tr>
+      </tbody>
+    </table>
+  </section>
 
 </body>
 </html>
