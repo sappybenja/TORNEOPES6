@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Torneo PES 6</title>
+  <style>
+    body {
+      background-color: #121212;
+      color: #e0e0e0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0; padding: 0;
+    }
+    header {
+      background: #1f1f1f;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 2px solid #ff3c3c;
+    }
+    header h1 {
+      margin: 0;
+      color: #ff3c3c;
+      font-size: 2.5em;
+    }
+    section {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+    h2 {
+      border-bottom: 2px solid #ff3c3c;
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+      color: #ff3c3c;
+    }
+    .campeones, .finales {
+      background: #222;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 0 8px #ff3c3c55;
+    }
+    .campeones ul, .finales ul {
+      list-style: none;
+      padding: 0;
+    }
+    .campeones li, .finales li {
+      padding: 10px 0;
+      border-bottom: 1px solid #444;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .campeones li:last-child, .finales li:last-child {
+      border-bottom: none;
+    }
+    .finales .resultado {
+      font-weight: bold;
+      color: #ff3c3c;
+    }
+    footer {
+      text-align: center;
+      color: #555;
+      padding: 15px;
+      margin-top: 40px;
+      border-top: 1px solid #333;
+      font-size: 0.9em;
+    }
+    @media (max-width: 600px) {
+      .campeones li, .finales li {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Torneo PES 6</h1>
+  <p>¡Bienvenidos al torneo oficial de PES 6!</p>
+</header>
+
+<section class="campeones">
+  <h2>Campeones</h2>
+  <ul>
+    <li><span>2023 - Juan Pérez</span><span>Equipo: Barcelona</span></li>
+    <li><span>2022 - María López</span><span>Equipo: Real Madrid</span></li>
+    <li><span>2021 - Carlos Gómez</span><span>Equipo: Manchester United</span></li>
+  </ul>
+</section>
+
+<section class="finales">
+  <h2>Finales</h2>
+  <ul>
+    <li>
+      <div>2023: Juan Pérez vs María López</div>
+      <div class="resultado">Resultado: 3 - 2</div>
+    </li>
+    <li>
+      <div>2022: María López vs Carlos Gómez</div>
+      <div class="resultado">Resultado: 4 - 1</div>
+    </li>
+    <li>
+      <div>2021: Carlos Gómez vs Luis Ramírez</div>
+      <div class="resultado">Resultado: 2 - 2 (penales 5-4)</div>
+    </li>
+  </ul>
+</section>
+
+<footer>
+  &copy; 2025 Torneo PES 6 - Todos los derechos reservados
+</footer>
+
+</body>
+</html>
