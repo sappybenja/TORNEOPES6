@@ -81,7 +81,7 @@
     color:#00bfff;
     font-weight:bold;
   }
-  .palmares {
+  .palmares, .palmares-clubes {
     max-width:800px;
     margin:40px auto;
     padding:30px;
@@ -89,33 +89,37 @@
     border-radius:10px;
     box-shadow:0 0 12px #00bfff33;
   }
-  .palmares h2 {
+  .palmares h2, .palmares-clubes h2 {
     text-align:center;
     color:#00bfff;
     margin-bottom:20px;
   }
-  .palmares ul {
-    list-style:none;
-    padding:0;
+  .accordion {
+    background:#1a1a1a;
+    border-radius:10px;
+    overflow:hidden;
+    margin-bottom:15px;
+    border:1px solid #333;
   }
-  .palmares li {
-    display:flex;
-    justify-content:space-between;
-    padding:10px 0;
-    border-bottom:1px solid #333;
+  .accordion-header {
+    background:#111;
+    color:#00bfff;
+    padding:15px 20px;
     font-weight:bold;
+    cursor:pointer;
   }
-  .palmares li span {
+  .accordion-body {
+    display:none;
+    background:#191919;
+    padding:10px 20px 20px;
+  }
+  .accordion-body .final {
+    border-bottom:1px solid #333;
+    margin-bottom:10px;
+    padding-bottom:10px;
+  }
+  .accordion-body .final strong {
     color:#00ff88;
-  }
-  .palmares li:first-child {
-    border-top:1px solid #333;
-  }
-  footer {
-    text-align:center;
-    margin:40px 0 20px;
-    color:#666;
-    font-size:0.9rem;
   }
 </style>
 </head>
@@ -125,211 +129,84 @@
   <h1>Torneo PES 6</h1>
 </header>
 
-<div class="container">
-  <!-- 1 -->
-  <div class="card">
-    <h3>Primera Edición</h3>
-    <div class="matchup">
-      <div class="team"><div class="logo" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/1/1f/FC_Bayern_M%C3%BCnchen_logo_%282017%29.svg')"></div>Bayern de Munich</div>
-      <div class="vs">vs</div>
-      <div class="team"><div class="logo" style="background-image:url('https://upload.wikimedia.org/wikipedia/en/7/7e/Valencia_CF_logo.svg')"></div>Valencia</div>
-    </div>
-    <div class="result">Resultado: 1 – 0</div>
-    <div class="champion">Campeón: <span>Rashi</span> con Bayern de Munich</div>
-  </div>
-  <!-- 2 -->
-  <div class="card">
-    <h3>Segunda Edición</h3>
-    <div class="matchup">
-      <div class="team"><div class="logo" style="background-image:url('https://upload.wikimedia.org/wikipedia/en/7/7e/Valencia_CF_logo.svg')"></div>Valencia</div>
-      <div class="vs">vs</div>
-      <div class="team"><div class="logo" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/1/1f/FC_Bayern_M%C3%BCnchen_logo_%282017%29.svg')"></div>Bayern de Munich</div>
-    </div>
-    <div class="result">Resultado: 3 – 0</div>
-    <div class="champion">Campeón: <span>Benja</span> con Valencia</div>
-  </div>
-  <!-- 3 -->
-  <div class="card">
-    <h3>Tercera Edición</h3>
-    <div class="matchup">
-      <div class="team"><div class="logo" style="background-image:url('https://upload.wikimedia.org/wikipedia/en/c/cc/Chelsea_FC.svg')"></div>Chelsea</div>
-      <div class="vs">vs</div>
-      <div class="team"><div class="logo" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/d/d0/Logo_of_AC_Milan.svg')"></div>Milan</div>
-    </div>
-    <div class="result">Resultado: 1 – 0</div>
-    <div class="champion">Campeón: <span>Ema</span> con Chelsea</div>
-  </div>
-  <!-- 4 -->
-  <div class="card">
-    <h3>Cuarta Edición (Mundialista)</h3>
-    <div class="matchup">
-      <div class="team"><div class="logo" style="background-image:url('https://upload.wikimedia.org/wikipedia/en/9/9a/Flag_of_Spain.svg')"></div>España</div>
-      <div class="vs">vs</div>
-      <div class="team"><div class="logo" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/1/1a/Flag_of_Argentina.svg')"></div>Argentina</div>
-    </div>
-    <div class="result">Resultado: 2 – 1</div>
-    <div class="champion">Campeón: <span>Benja</span> con España</div>
-  </div>
-  <!-- 5 -->
-  <div class="card">
-    <h3>Quinta Edición</h3>
-    <div class="matchup">
-      <div class="team"><div class="logo" style="background-image:url('https://upload.wikimedia.org/wikipedia/en/7/7a/Manchester_United_FC_crest.svg')"></div>Manchester United</div>
-      <div class="vs">vs</div>
-      <div class="team"><div class="logo" style="background-image:url('https://upload.wikimedia.org/wikipedia/en/c/cc/Chelsea_FC.svg')"></div>Chelsea</div>
-    </div>
-    <div class="result">Resultado: 2 – 0</div>
-    <div class="champion">Campeón: <span>Moya</span> con Manchester United</div>
-  </div>
-  <!-- 6 -->
-  <div class="card">
-    <h3>Sexta Edición</h3>
-    <div class="matchup">
-      <div class="team"><div class="logo" style="background-image:url('https://upload.wikimedia.org/wikipedia/en/7/7a/Manchester_United_FC_crest.svg')"></div>Manchester United</div>
-      <div class="vs">vs</div>
-      <div class="team"><div class="logo" style="background-image:url('https://upload.wikimedia.org/wikipedia/en/7/7e/Valencia_CF_logo.svg')"></div>Valencia</div>
-    </div>
-    <div class="result">Resultado: 4 – 2</div>
-    <div class="champion">Campeón: <span>Moya</span> con Manchester United</div>
-  </div>
-  <!-- 7 -->
-  <div class="card">
-    <h3>Séptima Edición</h3>
-    <div class="matchup">
-      <div class="team"><div class="logo" style="background-image:url('https://upload.wikimedia.org/wikipedia/en/5/53/Arsenal_FC.svg')"></div>Arsenal</div>
-      <div class="vs">vs</div>
-      <div class="team"><div class="logo" style="background-image:url('https://upload.wikimedia.org/wikipedia/en/c/cc/Chelsea_FC.svg')"></div>Chelsea</div>
-    </div>
-    <div class="result">Resultado: 4 – 2</div>
-    <div class="champion">Campeón: <span>Benja</span> con Arsenal</div>
-  </div>
-  <!-- 8 -->
-  <div class="card">
-    <h3>Octava Edición (Mundialista)</h3>
-    <div class="matchup">
-      <div class="team"><div class="logo" style="background-image:url('https://upload.wikimedia.org/wikipedia/en/9/9a/Flag_of_Spain.svg')"></div>España</div>
-      <div class="vs">vs</div>
-      <div class="team"><div class="logo" style="background-image:url('https://upload.wikimedia.org/wikipedia/en/b/ba/Flag_of_Germany.svg')"></div>Alemania</div>
-    </div>
-    <div class="result">Resultado: 2 – 2 (4 – 1 penales)</div>
-    <div class="champion">Campeón: <span>Benja</span> con España</div>
-  </div>
-  <!-- 9 -->
-  <div class="card">
-    <h3>Novena Edición</h3>
-    <div class="matchup">
-      <div class="team"><div class="logo" style="background-image:url('https://upload.wikimedia.org/wikipedia/en/5/53/Arsenal_FC.svg')"></div>Arsenal</div>
-      <div class="vs">vs</div>
-      <div class="team"><div class="logo" style="background-image:url('https://upload.wikimedia.org/wikipedia/en/0/05/FC_Internazionale_Milano_2021_logo.svg')"></div>Inter</div>
-    </div>
-    <div class="result">Resultado: 2 – 1</div>
-    <div class="champion">Campeón: <span>Benja</span> con Arsenal</div>
-  </div>
-  <!-- 10 -->
-  <div class="card">
-    <h3>Décima Edición</h3>
-    <div class="matchup">
-      <div class="team"><div class="logo" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/2/20/Flag_of_the_Netherlands.svg')"></div>Holanda</div>
-      <div class="vs">vs</div>
-      <div class="team"><div class="logo" style="background-image:url('https://upload.wikimedia.org/wikipedia/en/b/be/Flag_of_England.svg')"></div>Inglaterra</div>
-    </div>
-    <div class="result">Resultado: 2 – 1</div>
-    <div class="champion">Campeón: <span>Ema</span> con Holanda</div>
-  </div>
-  <!-- 11 -->
-  <div class="card">
-    <h3>Onceava Edición</h3>
-    <div class="matchup">
-      <div class="team"><div class="logo" style="background-image:url('https://upload.wikimedia.org/wikipedia/en/c/cc/Chelsea_FC.svg')"></div>Chelsea</div>
-      <div class="vs">vs</div>
-      <div class="team"><div class="logo" style="background-image:url('https://upload.wikimedia.org/wikipedia/en/4/47/FC_Barcelona_(crest).svg')"></div>Barcelona</div>
-    </div>
-    <div class="result">Resultado: 1 – 0</div>
-    <div class="champion">Campeón: <span>Ema</span> con Chelsea</div>
-  </div>
-  <!-- 12 -->
-  <div class="card">
-    <h3>Doceava Edición</h3>
-    <div class="matchup">
-      <div class="team"><div class="logo" style="background-image:url('https://upload.wikimedia.org/wikipedia/en/4/47/FC_Barcelona_(crest).svg')"></div>Barcelona</div>
-      <div class="vs">vs</div>
-      <div class="team"><div class="logo" style="background-image:url('https://upload.wikimedia.org/wikipedia/en/0/05/FC_Internazionale_Milano_2021_logo.svg')"></div>Inter</div>
-    </div>
-    <div class="result">Resultado: 1 – 0</div>
-    <div class="champion">Campeón: <span>Cordi</span> con Barcelona</div>
-  </div>
-  <!-- 13 -->
-  <div class="card">
-    <h3>Treceava Edición</h3>
-    <div class="matchup">
-      <div class="team"><div class="logo" style="background-image:url('https://upload.wikimedia.org/wikipedia/en/0/05/FC_Internazionale_Milano_2021_logo.svg')"></div>Inter</div>
-      <div class="vs">vs</div>
-      <div class="team"><div class="logo" style="background-image:url('https://upload.wikimedia.org/wikipedia/en/c/cc/Chelsea_FC.svg')"></div>Chelsea</div>
-    </div>
-    <div class="result">Resultado: 3 – 3 (4 – 2 penales)</div>
-    <div class="champion">Campeón: <span>Gena</span> con Inter</div>
-  </div>
-  <!-- 14 -->
-  <div class="card">
-    <h3>Catorceava Edición</h3>
-    <div class="matchup">
-      <div class="team"><div class="logo" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/1/1a/Flag_of_Argentina.svg')"></div>Argentina</div>
-      <div class="vs">vs</div>
-      <div class="team"><div class="logo" style="background-image:url('https://upload.wikimedia.org/wikipedia/en/0/03/Flag_of_Italy.svg')"></div>Italia</div>
-    </div>
-    <div class="result">Resultado: 2 – 1</div>
-    <div class="champion">Campeón: <span>Cordi</span> con Argentina</div>
-  </div>
-</div>
+<!-- Aquí iría el contenido original del torneo -->
 
-<section class="palmares">
-  <h2>🏅 Palmarés de Jugadores</h2>
-  <ul>
-    <li>Benja <span>5 títulos</span></li>
-    <li>Ema <span>3 títulos</span></li>
-    <li>Cordi <span>2 títulos</span></li>
-    <li>Moya <span>2 títulos</span></li>
-    <li>Rashi <span>1 título</span></li>
-    <li>Gena <span>1 título</span></li>
-  </ul>
+<section class="palmares-clubes">
+  <h2>🏆 Palmarés de Clubes</h2>
+  <div class="accordion" onclick="toggleAccordion(this)">
+    <div class="accordion-header">Arsenal - 2 títulos</div>
+    <div class="accordion-body">
+      <div class="final">Edición 7: Arsenal 4–2 Chelsea - <strong>Benja</strong></div>
+      <div class="final">Edición 9: Arsenal 2–1 Inter - <strong>Benja</strong></div>
+    </div>
+  </div>
+  <div class="accordion" onclick="toggleAccordion(this)">
+    <div class="accordion-header">Manchester United - 2 títulos</div>
+    <div class="accordion-body">
+      <div class="final">Edición 5: Man. United 2–0 Chelsea - <strong>Moya</strong></div>
+      <div class="final">Edición 6: Man. United 4–2 Valencia - <strong>Moya</strong></div>
+    </div>
+  </div>
+  <div class="accordion" onclick="toggleAccordion(this)">
+    <div class="accordion-header">España - 2 títulos</div>
+    <div class="accordion-body">
+      <div class="final">Edición 4: España 2–1 Argentina - <strong>Benja</strong></div>
+      <div class="final">Edición 8: España 2–2 (4–1) Alemania - <strong>Benja</strong></div>
+    </div>
+  </div>
+  <div class="accordion" onclick="toggleAccordion(this)">
+    <div class="accordion-header">Chelsea - 2 títulos</div>
+    <div class="accordion-body">
+      <div class="final">Edición 3: Chelsea 1–0 Milan - <strong>Ema</strong></div>
+      <div class="final">Edición 11: Chelsea 1–0 Barcelona - <strong>Ema</strong></div>
+    </div>
+  </div>
+  <div class="accordion" onclick="toggleAccordion(this)">
+    <div class="accordion-header">Valencia - 1 título</div>
+    <div class="accordion-body">
+      <div class="final">Edición 2: Valencia 3–0 Bayern - <strong>Benja</strong></div>
+    </div>
+  </div>
+  <div class="accordion" onclick="toggleAccordion(this)">
+    <div class="accordion-header">Bayern de Munich - 1 título</div>
+    <div class="accordion-body">
+      <div class="final">Edición 1: Bayern 1–0 Valencia - <strong>Rashi</strong></div>
+    </div>
+  </div>
+  <div class="accordion" onclick="toggleAccordion(this)">
+    <div class="accordion-header">Holanda - 1 título</div>
+    <div class="accordion-body">
+      <div class="final">Edición 10: Holanda 2–1 Inglaterra - <strong>Ema</strong></div>
+    </div>
+  </div>
+  <div class="accordion" onclick="toggleAccordion(this)">
+    <div class="accordion-header">Barcelona - 1 título</div>
+    <div class="accordion-body">
+      <div class="final">Edición 12: Barcelona 1–0 Inter - <strong>Cordi</strong></div>
+    </div>
+  </div>
+  <div class="accordion" onclick="toggleAccordion(this)">
+    <div class="accordion-header">Inter - 1 título</div>
+    <div class="accordion-body">
+      <div class="final">Edición 13: Inter 3–3 (4–2) Chelsea - <strong>Gena</strong></div>
+    </div>
+  </div>
+  <div class="accordion" onclick="toggleAccordion(this)">
+    <div class="accordion-header">Argentina - 1 título</div>
+    <div class="accordion-body">
+      <div class="final">Edición 14: Argentina 2–1 Italia - <strong>Cordi</strong></div>
+    </div>
+  </div>
 </section>
 
-<section class="palmares">
-  <h2>🏅 Palmarés de Clubes</h2>
-  <ul>
-    <li>Arsenal <span>2 títulos</span></li>
-    <li>Manchester United <span>2 títulos</span></li>
-    <li>España <span>2 títulos</span></li>
-    <li>Chelsea <span>2 títulos</span></li>
-    <li>Valencia <span>1 título</span></li>
-    <li>Bayern de Munich <span>1 título</span></li>
-    <li>Holanda <span>1 título</span></li>
-    <li>Barcelona <span>1 título</span></li>
-    <li>Inter <span>1 título</span></li>
-    <li>Argentina <span>1 título</span></li>
-  </ul>
-</section>
-<section class="palmares">
-  <h2>📸 Momentos Históricos del Torneo</h2>
-  <div class="container">
-    <div class="card"><h3>El Primer Campeón del Torneo</h3><img src="https://pbs.twimg.com/media/GDhYCWZXQAAhEFD?format=jpg&name=large" style="width:100%; border-radius:8px;"></div>
-    <div class="card"><h3>El Valencia Ganando su Primera Estrella</h3><img src="https://pbs.twimg.com/media/GDhYm0NWcAAraZT?format=png&name=360x360" style="width:100%; border-radius:8px;"></div>
-    <div class="card"><h3>El Gol de Robben: Chelsea Campeón</h3><img src="https://pbs.twimg.com/media/GDhZbmPWsAEm72U?format=jpg&name=large" style="width:100%; border-radius:8px;"></div>
-    <div class="card"><h3>España Levanta su Primera Copa del Mundo</h3><img src="https://pbs.twimg.com/media/GDhag4EXAAA221-?format=jpg&name=4096x4096" style="width:100%; border-radius:8px;"></div>
-    <div class="card"><h3>Torres: Goleador en Todos los Partidos</h3><img src="https://pbs.twimg.com/media/GDhWwmmWAAEhW7H?format=jpg&name=4096x4096" style="width:100%; border-radius:8px;"></div>
-    <div class="card"><h3>El United de Moya Campeón</h3><img src="https://pbs.twimg.com/media/GDhbzWNXkAAI1YZ?format=jpg&name=4096x4096" style="width:100%; border-radius:8px;"></div>
-    <div class="card"><h3>El United Bicampeón</h3><img src="https://pbs.twimg.com/media/GDiVFFeWAAAtnFD?format=png&name=small" style="width:100%; border-radius:8px;"></div>
-    <div class="card"><h3>El Arsenal de Benja: Los Invencibles</h3><img src="https://pbs.twimg.com/media/GDnwPehXMAASZYi?format=jpg&name=large" style="width:100%; border-radius:8px;"></div>
-    <div class="card"><h3>España Lo Hace de Nuevo</h3><img src="https://e00-elmundo.uecdn.es/mundial/2010/imagenes/2010/07/12/fasefinal/1278936199_0.jpg" style="width:100%; border-radius:8px;"></div>
-    <div class="card"><h3>Arsenal Invencible Bicampeón</h3><img src="https://pbs.twimg.com/media/GPCWSW5XwAAhfsP?format=png&name=small" style="width:100%; border-radius:8px;"></div>
-    <div class="card"><h3>Holanda Campeona del Mundo</h3><img src="https://veja.abril.com.br/wp-content/uploads/2016/06/futebol-copa-holanda-espanha-20140613-27-original.jpeg?quality=70&strip=info&w=928" style="width:100%; border-radius:8px;"></div>
-    <div class="card"><h3>Robben MVP y Campeón</h3><img src="https://pbs.twimg.com/media/GPF1bciXQAAbIbS?format=png&name=small" style="width:100%; border-radius:8px;"></div>
-    <div class="card"><h3>Barcelona Campeón por Primera Vez</h3><img src="https://pbs.twimg.com/media/GwFH90kWwAAZZrt?format=png&name=small" style="width:100%; border-radius:8px;"></div>
-    <div class="card"><h3>El Milagro de Pesna: Inter Campeón</h3><img src="https://pbs.twimg.com/media/GwFIYS1WoAA0pSr?format=png&name=small" style="width:100%; border-radius:8px;"></div>
-    <div class="card"><h3>Cordi Invatible: Su Primer Mundial</h3><img src="https://pbs.twimg.com/media/GwFdUWPWYAMBvmW?format=png&name=900x900" style="width:100%; border-radius:8px;"></div>
-  </div>
-</section>
-<footer>© 2025 Torneo PES 6 — Con pasión futbolera ⚽</footer>
+<footer>© 2025 Torneo PES 6 — Con pasión futbolera ⚽</footer>
+
+<script>
+function toggleAccordion(el) {
+  const body = el.querySelector(".accordion-body");
+  body.style.display = body.style.display === "block" ? "none" : "block";
+}
+</script>
 
 </body>
 </html>
